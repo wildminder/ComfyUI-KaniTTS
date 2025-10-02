@@ -1,0 +1,180 @@
+{
+  "id": "86fff6ce-5f57-4989-bb24-f417d970c591",
+  "revision": 0,
+  "last_node_id": 5,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "SaveAudio",
+      "pos": [
+        -1237.9410400390625,
+        -845.9237060546875
+      ],
+      "size": [
+        270,
+        112
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 1
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/KaniTTS"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "KaniTTS",
+      "pos": [
+        -1660.9163818359375,
+        -845.9237060546875
+      ],
+      "size": [
+        382.4793395996094,
+        429.4380187988281
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "Generated Audio",
+          "type": "AUDIO",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KaniTTS"
+      },
+      "widgets_values": [
+        "kani-tts-370m (Multi-Speaker)",
+        "puck -- English (Gemini)",
+        "The ventilation shaft is obviously trapped with poison gas because everything in this cursed dungeon wants to kill us in creative ways, so we should spend three hours ritually casting detect magic on every surface ",
+        1.4,
+        0.95,
+        1.1,
+        2000,
+        816761962109297,
+        "fixed",
+        false,
+        "cuda",
+        "bfloat16"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "MarkdownNote",
+      "pos": [
+        -2068.45263671875,
+        -841.675048828125
+      ],
+      "size": [
+        368.22467041015625,
+        417.5700378417969
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note",
+      "properties": {},
+      "widgets_values": [
+        "> NOTE: This node performs **Text-to-Speech** using predefined or randomized voices. It **does not** perform voice cloning from a user-provided audio file.\n\n### Node Inputs\n\n*   **`model_name`**: Select the KaniTTS model to use. Models are downloaded automatically.\n*   **`speaker`**: Select a predefined voice. This is only effective when using the `kani-tts-370m` model.\n*   **`text`**: The target text to synthesize into speech.\n*   **`temperature`**: Controls randomness. Higher values are more creative but can be less coherent.\n*   **`top_p`**: Nucleus sampling probability. Helps control the diversity of the generated speech.\n*   **`repetition_penalty`**: Penalizes the model for repeating words or sounds, reducing robotic output.\n*   **`max_new_tokens`**: The maximum length of the generated audio tokens.\n*   **`seed`**: A seed for reproducibility. Set to -1 for a random seed on each run.\n*   **`force_offload`**: Forces the model to be completely offloaded from VRAM after generation.\n*   **`device`**: The compute device to use for inference (e.g., `cuda`, `cpu`).\n*   **`dtype`**: The data type for model precision (e.g., `bfloat16`, `float16`). `bfloat16` is recommended for modern GPUs."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4,
+      "type": "MarkdownNote",
+      "pos": [
+        -2066.074462890625,
+        -364.5677490234375
+      ],
+      "size": [
+        787.9339599609375,
+        360.14874267578125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note",
+      "properties": {},
+      "widgets_values": [
+        "# ComfyUI-KaniTTS\n\nKaniTTS is a high-speed, high-fidelity Text-to-Speech (TTS) model family designed for real-time conversational AI applications. It uses a novel two-stage pipeline, combining a powerful language model with an efficient audio codec to deliver exceptional speed and audio quality..\n\nThis node automatically downloads the required KaniTTS models and their dependencies (like the NeMo audio codec).\n\n| Model Name | Parameters | Description / Key Features | Hugging Face Link |\n|:---|:---:|:---|:---|\n| `kani-tts-370m` | 370M | **Multi-Speaker.** The most flexible model, supporting a wide range of predefined voices in multiple languages. | [nineninesix/kani-tts-370m](https://huggingface.co/nineninesix/kani-tts-370m) |\n| `kani-tts-450m-0.1-pt` | 450M | **Base Model.** Pretrained on English. Generates a generic/randomized voice. Good for creative applications or as a base for fine-tuning. | [nineninesix/kani-tts-450m-0.1-pt](https://huggingface.co/nineninesix/kani-tts-450m-0.1-pt) |\n| `kani-tts-450m-0.1-ft`| 450M | **Finetuned (Male).** A version of the 450M model finetuned to produce a consistent male voice. | [nineninesix/kani-tts-450m-0.1-ft](https://huggingface.co/nineninesix/kani-tts-450m-0.1-ft) |\n| `kani-tts-450m-0.2-pt` | 450M | **Base Model 2.** Pretrained with broader multilingual support (EN, DE, AR, CN, KR, FR, JP, ES). Generates a generic/randomized voice. | [nineninesix/kani-tts-450m-0.2-pt](https://huggingface.co/nineninesix/kani-tts-450m-0.2-pt) |\n| `kani-tts-450m-0.2-ft` | 450M | **Finetuned (Female).** A version of the 450M model finetuned to produce a consistent female voice. | [nineninesix/kani-tts-450m-0.2-ft](https://huggingface.co/nineninesix/kani-tts-450m-0.2-ft) |\n\n\n### AI news [TokenDiffusion](https://t.me/TokenDiff)\n"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 5,
+      "type": "MarkdownNote",
+      "pos": [
+        -1236.770751953125,
+        -677.9447021484375
+      ],
+      "size": [
+        287.2329406738281,
+        267.1568298339844
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note",
+      "properties": {},
+      "widgets_values": [
+        "# Warning: \n\nKaniTTS requires specific and potentially conflicting dependencies. It is highly recommended to use a dedicated Python environment for ComfyUI.\n\n\n# Warning 2 \n\nThe automatic installation of nemo_toolkit often fails on Windows due to dependencies that require compilation (pynini, editdistance, etc.). The recommended method is to manually install the pre-built packages (.whl files) for your Python version.\n\n\nFor the installation instruction visit the [github ComfyUI-KaniTTS](https://github.com/wildminder/ComfyUI-KaniTTS)"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9090909090909092,
+      "offset": [
+        2500.65263671875,
+        906.3237060546875
+      ]
+    },
+    "frontendVersion": "1.26.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
