@@ -1,0 +1,15 @@
+[project]
+name = "ComfyUI-KaniTTS"
+description = "Kani TTS. Generate natural, high‑quality speech from text"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["nemo_toolkit[tts]","braceexpand","librosa","hydra-core","lightning","fiddle","cloudpickle","megatron","IPython","numpy","megatron-core","webdataset","lhotse","kaldialign","pyannote.audio","jiwer","datasets","editdistance"]
+
+[project.urls]
+Repository = "https://github.com/wildminder/ComfyUI-KaniTTS"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "wildai"
+DisplayName = "ComfyUI-KaniTTS"
+Icon = ""
