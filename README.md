@@ -4,7 +4,7 @@
   <h1 align="center">ComfyUI-KaniTTS</h1>
 
   <a href="https://github.com/wildminder/ComfyUI-KaniTTS">    
-    <img src="./example_workflows/KaniTTS_example.png" alt="ComfyUI-KaniTTS" width="70%">
+    <img src="https://github.com/user-attachments/assets/7be7676e-7560-46f5-a12a-868347c210b0" alt="ComfyUI-KaniTTS" width="70%">
   </a>
   
   <p align="center">
@@ -54,33 +54,35 @@ The easiest way to install is via **ComfyUI Manager**. Search for `ComfyUI-KaniT
 Alternatively, to install manually:
 
 1.  **Clone the Repository:**
+
     Navigate to your `ComfyUI/custom_nodes/` directory and clone this repository:
     ```sh
     git clone https://github.com/wildminder/ComfyUI-KaniTTS.git
     ```
 
-2.  **Install Dependencies:**
-
 > [!WARNING]
 > KaniTTS requires specific and potentially conflicting dependencies. It is highly recommended to use a dedicated Python environment for ComfyUI.
+
+
+2.  **Install Dependencies:**
 
     Open a terminal or command prompt, activate your environment, navigate into the cloned directory, and install the required packages:
     
     ```sh
     cd ComfyUI/custom_nodes/ComfyUI-KaniTTS
-    pip install "nemo_toolkit[tts]"
-    pip install -U "git+https://github.com/huggingface/transformers.git"
+    pip install -r requirements.txt
     ```
+
 
 4.  **Start/Restart ComfyUI:**
     Launch ComfyUI. The "Kani TTS" node will appear under the `audio/tts` category. The first time you use the node, it will automatically download the selected model to your `ComfyUI/models/tts/` folder.
 
-<span style="color:red;">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</span>
+<p style="color:red;" align="center">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
 
 > [!CAUTION]
 > Windows users.
 
-<span style="color:red;">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</span>
+<p style="color:red;" align="center">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
