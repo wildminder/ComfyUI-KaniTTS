@@ -80,7 +80,23 @@ Alternatively, to install manually:
 <p style="color:red;" align="center">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
 
 > [!CAUTION]
-> Windows users.
+> The automatic installation of `nemo_toolkit` often fails on Windows due to dependencies that require compilation (`pynini`, `editdistance`, etc.). The recommended method is to manually install the pre-built packages (`.whl` files) for your Python version.
+
+**Step A: Download Required Packages**
+
+1.  **Identify your Python version.** Open a command prompt and run `python --version` (e.g., `Python 3.12.4`).
+2.  Download the appropriate `.whl` files for your Python version from the table below. All files are hosted on the [Python-Windows-WHL Hugging Face repository](https://huggingface.co/Wildminder/Python-Windows-WHL).
+
+| Package Name | Version | Python Version | Download Link |
+|:---|:---|:---:|:---|
+| `nemo_toolkit` | `2.6.0rc0` | 3.12 / 3.13 | [nemo_toolkit-2.6.0rc0-py3-none-any.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/nemo_toolkit-2.6.0rc0-py3-none-any.whl) |
+| `pynini` | `2.1.6.post1` | 3.12 | [pynini-2.1.6.post1-cp312-cp312-win_amd64.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/pynini-2.1.6.post1-cp312-cp312-win_amd64.whl) |
+| `pynini` | `2.1.7` | 3.13 | [pynini-2.1.7-py313.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/pynini-2.1.7-py313.whl) |
+| `editdistance` | `0.8.1` | 3.13 | [editdistance-0.8.1-cp313-cp313-win_amd64.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/editdistance-0.8.1-cp313-cp313-win_amd64.whl) |
+| `megatron_core` | `0.13.1` | 3.12 | [megatron_core-0.13.1-cp312-cp312-win_amd64.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/megatron_core-0.13.1-cp312-cp312-win_amd64.whl) |
+| `megatron_core` | `0.13.1` | 3.13 | [megatron_core-0.13.1-cp313-cp313-win_amd64.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/megatron_core-0.13.1-cp313-cp313-win_amd64.whl) |
+| `texterrors` | `1.0.9` | 3.12 | [texterrors-1.0.9-cp312-cp312-win_amd64.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/texterrors-1.0.9-cp312-cp312-win_amd64.whl) |
+| `texterrors` | `1.0.9` | 3.13 | [texterrors-1.0.9-cp313-cp313-win_amd64.whl](https://huggingface.co/Wildminder/Python-Windows-WHL/blob/main/texterrors-1.0.9-cp313-cp313-win_amd64.whl) |
 
 <p style="color:red;" align="center">░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
 
