@@ -33,7 +33,7 @@
 KaniTTS is a high-speed, high-fidelity Text-to-Speech (TTS) model family designed for real-time conversational AI applications. It uses a novel two-stage pipeline, combining a powerful language model with an efficient audio codec to deliver exceptional speed and audio quality.
 
 <div align="center">
-      <img src="./example_workflows/KaniTTS_workflow.png" alt="ComfyUI-KaniTTS example workflow">
+      <img src="./example_workflows/KaniTTS_example.png" alt="ComfyUI-KaniTTS example workflow" width="60%">
   </div>
   
 This custom node handles everything from model downloading and memory management to audio processing, allowing you to generate high-quality speech directly from a text script using a variety of voices and models.
